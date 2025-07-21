@@ -19,3 +19,15 @@ let myTimeStamp = Date.now()
 // console.log(mycreatedDate.getTime());
 console.log(Math.floor(Date.now()/1000));
 
+let new_date = new Date()
+console.log(new_date);
+console.log(new_date.getMonth() + 1);
+console.log(new_date.getDay());
+
+ //  ${new_date.getDay()} and the time
+
+ new_date.toLocaleDateString('default', {
+    weekday: "long",
+
+ })
+
