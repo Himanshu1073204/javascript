@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style ="background-color: black; color: aliceblue;">
+    <h2>Amazing Images</h2>
+    <div>
+        <ul id ="images">
+            <li><img width="200px" height="200px" id="man" src="https://images.pexels.com/photos/32585276/pexels-photo-32585276.jpeg" alt=""></li>
+            <li><img width="200px" height="200px" id="tomato" src="https://images.pexels.com/photos/33210609/pexels-photo-33210609.jpeg" alt=""></li>
+            <li><img width="200px"  height="200px" id="building" src="https://images.pexels.com/photos/31270594/pexels-photo-31270594.jpeg" alt=""></li>
+            <li><img width="200px" height="200px" id="dog" src="https://images.pexels.com/photos/32462427/pexels-photo-32462427.jpeg" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://www.google.com/" id="google">Google</a></li>
+        </ul> 
+    </div>
+</body>
+<script>
+    // document.getElementById('tomato').onclick = function(){
+    //     alert("tomato onclicked")
+    // }
+    // attachedEvent()
+   // jQuery - on
+
+   // type, timestamp, defaultPrevented
+   // target, toElement, srcElement, currentTarget
+   // clientX, clientY, screenX, screenY
+   // altkey, ctrlkey, shiftkey, keyCode
+
+//    document.getElementById('images').addEventListener('click', function(e){
+//     console.log("click inside the ul"); 
+//    },false)
+   
+//    document.getElementById('tomato').addEventListener('click', function(e){
+//     console.log("tomato clicked");
+//     e.stopPropagation();
+//    },false)
+   
+//    document.getElementById('google').addEventListener('click', function(e){
+//       e.preventDefault();
+//    })
+  
+     document.querySelector('#images').addEventListener('click', function(e){
+          console.log(e.target.tagName);
+          if(e.target.tagName === 'IMG'){
+             console.log(e.target.id);
+             let removeIt =  e.target.parentNode
+             removeIt.remove()
+         // removeIt.parentNode.removeChild(removeIt)
+          }
+          
+     }, false)
+
+ 
+</script>
+</html>
